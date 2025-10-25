@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Caesar Cipher Web App</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>🔐 Caesar Cipher Web App</h1>
+        <p class="subtitle"> A Classical Encryption Technique using Alphabetic substitution and a fixed shift value.</p>
+
+        <form method="POST" class="cipher-box">
+            <textarea name="message" placeholder="Enter your message here..." required></textarea>
+
+            <input type="number" name="shift" placeholder="Shift value" required>
+
+            <div class="buttons">
+                <button type="submit" name="action" value="encrypt" class="encrypt-btn">🔒 Encrypt</button>
+                <button type="submit" name="action" value="decrypt" class="decrypt-btn">🔓 Decrypt</button>
+            </div>
+        </form>
+
+        {% if result %}
+        <div class="result-box">
+            <h2>Results </h2>
+            <p>{{ result }}</p>
+
+        </div>
+        {% endif %}
+    </div>
+  <footer>
+        ✨ <span class="neon">Build By Sameer</span> ✨
+    </footer>
+
+
+</body>
+</html>
