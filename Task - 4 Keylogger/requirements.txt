@@ -1,0 +1,5 @@
+tk
+reportlab
+openpyxl
+cryptography
+matplotlib
